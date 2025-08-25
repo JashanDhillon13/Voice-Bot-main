@@ -54,7 +54,7 @@ youtube_cmds = ['open youtube', 'i want to watch a video']
 weather_cmds = ['tell me the weather', 'weather', 'what about the weather']
 exit_cmds = ['exit', 'close', 'goodbye', 'nothing']
 color_cmds = ['what is your color', 'what is your colour']
-fav_color_cmds = ['what is your favourite colour', 'what is your favourite color']
+fav_color_cmds = ['what is your favourite colour', 'what is your favourite colo']
 thank_cmds = ['thank you']
 thank_resp = ['You’re welcome!', 'Glad I could help you.']
 
