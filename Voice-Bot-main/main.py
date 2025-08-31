@@ -8,21 +8,25 @@ from pygame import mixer
 import speech_recognition as sr
 
 # -------------------
-# Initialize Speech Engine
+# Initialize Speech Engine (ONCE)
 # -------------------
+import pyttsx3
+
+# initialize once
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)  # female voice
-engine.setProperty('volume', 1.0)          # 0.0 to 1.0
-engine.setProperty('rate', 150)            # normal speaking speed
+engine.setProperty('voice', voices[1].id)  # try voices[0] if this crashes
+engine.setProperty('rate', 150)
+engine.setProperty('volume', 1.0)
 
 # -------------------
-# Helper Function
+# Speak function
 # -------------------
 def speak(text):
-    print(text)
+    print("Bot:", text)  # prints response on screen
     engine.say(text)
     engine.runAndWait()
+
 
 # -------------------
 # Commands & Responses
